@@ -1,9 +1,12 @@
 import { FaPlus } from "react-icons/fa";
 import { RiExpandUpDownFill } from "react-icons/ri";
 import CustomerCard from "./CustomerCard";
-
+import AddModal from "./AddModal";
+import { useState } from "react";
 
 const RightSide = () => {
+  const [addModal,setAddModal] =useState(false)
+
   
   return (
     <div className='flex flex-col bg-[#F3F3F3] ml-[20.85vw] min-h-[100vh]'>
@@ -13,13 +16,15 @@ const RightSide = () => {
         </h1>
       </div>
       <button
-        className='w-[17.91vw] h-[6.86vh] mt-[4vh] bg-gradient-to-r from-[#57BC90] to-[#004B40] text-white uppercase text-[1.2vw] flex items-center rounded-[10px] gap-[1vw] pl-[1.25vw]  ml-[5vw]'
+        className='w-[17.91vw] h-[6.86vh] mt-[4vh] bg-gradient-to-r from-[#57BC90] to-[#004B40] text-white uppercase text-[1.2vw] flex items-center rounded-[10px] gap-[1vw] pl-[1.25vw]  ml-[5vw]' onClick={() => setAddModal(true)}
+        
       >
         <span>
           <FaPlus />
         </span>
         <span>Add New Customer</span>
       </button>
+      <AddModal addModal={addModal} setAddModal={setAddModal } />
       <div className='bg-[#57BC90]/30 rounded-[10px]  h-[5.5vh] mx-[5vw] mt-[7vh] flex items-center text-[#015249] font-lato text-[1.2vw] font-bold'>
         <div className='flex  w-[27%] justify-end items-center'>
           Customer ID <RiExpandUpDownFill className='cursor-pointer' />

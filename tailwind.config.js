@@ -4,5 +4,13 @@ export default {
   theme: {
     extend: {},
   },
+  
+    extend: {
+      fontFamily: {
+        // Add your custom font family here
+        lato: ['lato', 'sans'],
+      },
+    },
+  
   plugins: [],
 };
