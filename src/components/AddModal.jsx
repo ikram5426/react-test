@@ -13,25 +13,24 @@ const AddModal = ({ addModal, setAddModal }) => {
     console.log(name, email);
     
 }
-console.log(email,name);
   return (
     <AnimatePresence>
       {addModal && (
         <motion.div
-          className='fixed flex top-0 left-0 w-[100vw] h-[100vh] bg-[#000]/80 z-50 items-center justify-center '
+          className='fixed  flex top-0 left-0 w-[100vw] h-[100vh] bg-[#000]/80 z-50 items-center justify-center '
           initial={{ scale: 0.5 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.2 }}
           exit={{ scale: 0 }}
         >
-          <div className='w-[26.6vw] h-auto pb-12 rounded-[1.01vw] bg-[#FBFCFC]'>
+          <div className='sm:w-[26.6vw] w-[75vw] h-auto pb-12 sm:rounded-[1.01vw] rounded-[4vw] bg-[#FBFCFC]'>
             <div>
               <img src={mask} alt='modal header' />
             </div>
-            <h2 className='relative -top-[4vw] text-white font-bold font-lato text-[2.02vw] flex items-center justify-center'>
+            <h2 className='relative sm:-top-[4vw] bottom-[15vw] text-white font-bold font-lato text-[7vw] sm:text-[2.02vw] flex sm:items-center justify-center'>
               Add New Customer
             </h2>
-            <button className='relative -top-[9.5vw] left-[24.5vw] font-bold text-white text-[1.25vw]'>
+            <button className='relative sm:-top-[9.5vw] bottom-[29vw] sm:left-[24.5vw] left-[67vw] font-bold text-white text-[6vw] sm:text-[1.25vw]'>
               <AiOutlineClose
                 onClick={() => setAddModal(false)}
                 onKeyDown={() => setAddModal(false)}
@@ -41,12 +40,12 @@ console.log(email,name);
             </button>
             <form
               action=''
-              className=' flex flex-col items-center -mt-[2vw] gap-[2vw]'
+              className=' flex flex-col items-center sm:-mt-[2vw] -mt-[10vw] sm:gap-[2vw] gap-[4vw]'
               onSubmit={handleSubmit}
             >
               <input
                 type='text'
-                className='w-[22.9vw] h-[5.4vh] outline-none bg-[#FFFFFF] border-solid border-[1px] border-[#DCDBDD] text-[#84818A] rounded-[.52vw] placeholder:text-[#84818A] text-[.85vw] font-lato font-medium  pl-[.75vw]'
+                className='sm:w-[22.9vw] sm:h-[5.4vh] h-[5vh] w-[85%] rounded-[3vw] outline-none bg-[#FFFFFF] border-solid border-[2px] sm:border-[1px] border-[#DCDBDD] text-[#84818A] sm:rounded-[.52vw] placeholder:text-[#84818A] sm:text-[.85vw] text-[4vw] font-lato sm:font-medium font-[400] sm:pl-[.75vw] pl-[3vw]'
                 placeholder='Customer name'
                 name='name'
                 value={name}
@@ -54,18 +53,18 @@ console.log(email,name);
               />
               <input
                 type='text'
-                className='w-[22.9vw] h-[5.4vh] outline-none bg-[#FFFFFF] border-solid border-[1px] border-[#DCDBDD] text-[#84818A] rounded-[.52vw] placeholder:text-[#84818A] text-[.85vw] font-lato font-medium pl-[.75vw]'
+                className='sm:w-[22.9vw] sm:h-[5.4vh] h-[5vh] w-[85%] rounded-[3vw] outline-none bg-[#FFFFFF] border-solid border-[2px] sm:border-[1px] border-[#DCDBDD] text-[#84818A] sm:rounded-[.52vw] placeholder:text-[#84818A] sm:text-[.85vw] text-[4vw] font-lato sm:font-medium font-[400] sm:pl-[.75vw] pl-[3vw]'
                 placeholder='Email'
                 name='email'
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
               />
-              <button className='text-[1vw] flex  font-lato text-[#57BC90] underline w-[100%] pl-[2vw] '>
+              <button className='sm:text-[1vw] text-[4vw] flex  font-lato text-[#57BC90] underline sm:w-[100%] pl-[2vw]   w-[85%] '>
                 Upload Photo
               </button>
               <button
                 type='submit'
-                className='w-[22.9vw] mt-[1.5vw] h-[5.4vh]  bg-gradient-to-r from-[#57BC90] to-[#004B40] rounded-[.52vw] font-lato  text-white text-[1vw]'
+                className='sm:w-[22.9vw] w-[85%] mt-[1.5vw] h-[5.4vh]  bg-gradient-to-r from-[#57BC90] to-[#004B40] rounded-[3vw] sm:rounded-[.52vw] font-lato font-bold text-white sm:text-[1vw] text-[4vw]'
               >
                 ADD CUSTOMERS
               </button>
