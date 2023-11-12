@@ -43,7 +43,7 @@ setEditModal(true)  };
         userData.map((user) => (
           <div
             key={user.id}
-            className='bg-[#FFFFFF] sm:h-[12.15vh] h-[37vh] sm:w-auto w-[75vw] sm:rounded-[10px] rounded-[4vw] shadow-sm flex sm:flex-row flex-col items-center sm:mt-4 mt-8 ml-auto sm:mb-0 mb-[10vw]'
+            className='bg-[#FFFFFF] sm:h-[12.15vh] h-auto sm:w-auto w-[75vw] sm:rounded-[10px] rounded-[4vw] shadow-sm flex sm:flex-row flex-col items-center sm:mt-4 mt-8 ml-auto sm:mb-0 mb-[10vw] pb-[5vw] sm:pb-0'
           >
             <img
               src={user.avatar}
